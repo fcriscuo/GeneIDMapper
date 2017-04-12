@@ -30,7 +30,7 @@ public class GeneSymbolIDMapper implements IDMapper {
     represents an implementation of the IDMapper interface that supports
     HUGO Symbol <-> Entrez ID conversions
     also supports a method to provide the HUGO Synbol & Entrez ID for a specified Ensembl ID
-    supports approx 40K mappings
+    supports approx 60K mappings
      */
 
     private static final Logger logger = Logger.getLogger(GeneSymbolIDMapper.class);

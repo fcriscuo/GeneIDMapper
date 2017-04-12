@@ -27,9 +27,8 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 /**
- * represents a collection of common values used throughout the importer
- * module
- * @author fcriscuf
+ * represents a collection of common values
+ * @author fcriscuolo
  */
 public interface StagingCommonNames {
 
@@ -48,12 +47,6 @@ public interface StagingCommonNames {
     public static final String stagingFileExtension = TEXT_FILE_EXTENSION;
     public static final String xmlExtension = XML_FILE_EXTENSION;
 
-    public static final List<String> variationList = Lists.newArrayList("INS", "SNP", "DNP", "TNP", "ONP");
-    // worksheet data types
-    public static final String DATATYPE_CNA = "cna-gistic";
-    public static final String DATATYPE_MUTATION = "mutation";
-    public static final String DATATYPE_FUSION = "fusion";
-    public static final String DATATYPE_CLINICAL = "clinical";
 
     // COMMON SPLITTERS & JOINERS
     public static final Splitter tabSplitter = Splitter.on("\t");
@@ -74,48 +67,6 @@ public interface StagingCommonNames {
             Splitter.on(System.getProperty("file.separator"));
     public final Pattern tabPattern = Pattern.compile("\t");
 
-    // transformation types
-    public static final String MUTATION_TYPE = "mutation";
-    public static final String CLINICAL_TYPE = "clinical";
-
-    public static final String STRUCTURAL_MUTATION_TYPE = "structural_mutation";
-    // staging file names
-    // mutations
-    public static final String MUTATIONS_STAGING_FILENAME = "data_mutations_extended.txt";
-    public static final String  MUTATIONS_METADATA_FILENAME = "meta_mutations_extended.txt";
-    //copy number
-    public static final String CNA_STAGING_FILENAME = "data_CNA.txt";
-    public static final String CNA_METADATA_FILENAME = "meta_CNA.txt";
-    // fusion data
-    public static final String FUSION_STAGING_FILENAME ="data_fusions.txt";
-    public static final String FUSION_METADATA_FILENAME = "meta_fusions.txt";
-    //clinical
-    public static final String CLINICAL_STAGING_FILENAME = "data_clinical.txt";
-
-    // Datasource names
-    public static final String DATA_SOURCE_ICGC = "icgc";
-    public static final String DATA_SOURCE_FOUNDATION = "foundation";
-    public static final String DATA_SOURCE_FOUNDATION_DEV = "foundation-dev";
-    public static final String DATA_SOURCE_DMP = "dmp-clinical-data-darwin";
-
-    // default base directory
-    public static final String DEFAULT_BASE_DIRECTORY = "/tmp/cbio-portal-data";
-
-    public static final String CASE_LISTS_DIRECTORY_NAME = "case_lists";
-
-    //suffix for filtered foundation studies
-    public static final String FOUNDATION_FILTERED_NOTATION = "-filtered";
-
-    // validation status values
-    public static final String VALIDATION_STATUS_UNKNOWN = "Unknown";
-    public static final String VALIDATION_STATUS_VALID = "Valid";
-
-    // IMPACT study
-    public static final String IMPACT_STUDY_IDENTIFIER = "mskimpact";
-    public static final String DMP_COMMENT_MARKER = "#";
-    public static final String DMP_STAGING_FILE_COMMENT = "#sequenced_samples:";
-
-    public static final String REFERENCED_SAMPLES_COMMENT = "#Referenced samples: ";
 
     // length of human chromosomes
     // http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/human/data/
